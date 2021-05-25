@@ -1,0 +1,13 @@
+---
+- name: Install FTP Server (vsftpd) - Ubuntu
+  apt:
+    name: vsftpd
+    state: present
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install FTP Server (vsftpd) - CentOS
+  yum:
+    name: vsftpd
+    state: present
+  when: ansible_distribution == "CentOS"
+
